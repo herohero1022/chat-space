@@ -1,0 +1,15 @@
+.side__header {
+  background-color: green;
+  height: 100px;
+  width: 100%;
+    &__text {
+      background-color: red;
+      height: 20px;
+      width: 100%;
+    }
+    &__menu {
+      background-color: blue;
+      height: 20px;
+      width: 100%;
+    }
+}
