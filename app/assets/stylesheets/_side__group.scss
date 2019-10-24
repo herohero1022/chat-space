@@ -7,24 +7,24 @@
       background-color:$side-color;
       padding-bottom: 40px;
       &--name {
-        color: $side-text-color;
+        color: $white-text-color;
         font-size: 15px;
         font-weight: bold;
       }
       &--message {
-        color: $side-text-color;
+        color: $white-text-color;
         font-size: 11px;
       }
     }
     &__middle {
       background-color: $side-color;
       &--name {
-        color: $side-text-color;
+        color: $white-text-color;
         font-size: 15px;
         font-weight: bold;
       }
       &--message {
-        color: $side-text-color;
+        color: $white-text-color;
         font-size: 11px;
       }
     }
