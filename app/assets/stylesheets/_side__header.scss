@@ -18,7 +18,14 @@
         }
         &--menu {
           background-color: $side-header-color;
-          font-size: 11px;
+          display: flex;
         }
     }
+}
+
+.fa.fa-edit {
+  color: white;
+}
+.fa.fa-cog {
+  color: white;
 }
