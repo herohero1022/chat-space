@@ -3,14 +3,19 @@
   .content
     .content__side
       .side__header
-        .side__header__text
-        .side__header__menu
+        .side__header__box
+          %p.side__header__box--name test-user
+          %ul.side__header__box--manu
       .side__text
-        %p.side__text__top
-        %p.side__text__middle
+        %p.side__text__top test-message
+        %p.side__text__middle さようなら
       .side__group
         .side__group__top
+          %p.side__group__top--name sample-group
+          %p.side__group__top--message hello!
         .side__group__middle
+          %p.side__group__middle--name example
+          %p.side__group__middle--message まだメッセージがありません
     .content__main
       .main__header
       .main__message

@@ -1,15 +1,24 @@
 .side__header {
-  background-color: green;
+  background-color: $side-header-color;
   height: 100px;
-  width: 100%;
-    &__text {
-      background-color: red;
-      height: 20px;
+  width: calc(100% - 40px);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+    &__box {
+      background-color: $side-header-color;
       width: 100%;
-    }
-    &__menu {
-      background-color: blue;
-      height: 20px;
-      width: 100%;
+      display: flex;
+      justify-content: space-between;
+        &--name {
+          background-color: $side-header-color;
+          color: $side-text-color;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        &--menu {
+          background-color: $side-header-color;
+          font-size: 11px;
+        }
     }
 }
