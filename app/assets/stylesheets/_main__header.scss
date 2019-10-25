@@ -1,0 +1,27 @@
+.main__header {
+  height: 100px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom:solid 1px #eee; 
+  margin: 0;
+    &__left-box {
+      padding-top: 35px;
+        &--group-name {
+          @include font-style(20px,#333333);
+          padding-bottom: 15px;
+        }
+        &--group-member {
+          @include font-style(12px,$gray-text-color);
+        }
+    }
+    &--edit-btn {
+      height: 40px;
+      line-height: 40px;
+      color: $light-blue-color;
+      padding: 0 20px;
+      margin-top: 28px;
+      border: solid 1px $light-blue-color;
+      right: 40;
+    }
+}

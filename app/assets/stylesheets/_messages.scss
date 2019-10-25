@@ -1,0 +1,24 @@
+.messages {
+  background-color: #fafafa;
+  height: calc(100vh - 305px);
+  padding: 46px 40px;
+}
+
+.message {
+  padding-bottom: 40px;
+    &__info {
+      display: flex;
+      margin-bottom: 10px;
+        &--talker {
+          @include font-style(16px,$black-text-color);
+          font-weight: bold;
+        }
+        &--date {
+          @include font-style(11px,$gray-text-color);
+          padding-left: 10px;
+        }
+    }
+    &__text {
+      @include font-style(14px,$black-text-color);
+    }
+}
