@@ -19,7 +19,6 @@
         }
     }
     &__text {
-      color: $black-text-color;
-      font-size: 14px
+      @include font-style(14px,$black-text-color);
     }
 }
