@@ -4,16 +4,15 @@
   display: flex;
   justify-content: space-between;
   border-bottom:solid 1px #eee; 
+  margin: 0;
     &__left-box {
       padding-top: 35px;
         &--group-name {
-          font-size: 20px;
-          color: #333333;
+          @include font-style(20px,#333333);
           padding-bottom: 15px;
         }
         &--group-member {
-          font-size: 12px;
-          color: $gray-text-color;
+          @include font-style(12px,$gray-text-color);
         }
     }
     &--edit-btn {

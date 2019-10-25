@@ -1,6 +1,6 @@
 .messages {
   background-color: #fafafa;
-  height: calc(100vh - 190px);
+  height: calc(100vh - 180px);
   padding: 46px 40px;
 }
 
@@ -10,13 +10,11 @@
       display: flex;
       margin-bottom: 10px;
         &--talker {
-          color: $black-text-color;
-          font-size: 16px;
+          @include font-style(16px,$black-text-color);
           font-weight: bold;
         }
         &--date {
-          color: $gray-text-color;
-          font-size: 11px;
+          @include font-style(11px,$gray-text-color);
           padding-left: 10px;
         }
     }

@@ -9,14 +9,12 @@
   background-color:$side-color;
   padding: 20px 0;
     &__name {
-      color: $white-text-color;
-      font-size: 15px;
+      @include font-style(15px,$white-text-color);
       font-weight: bold;
       padding-bottom: 5px;
     }
     &__message {
-      color: $white-text-color;
-      font-size: 11px;
+      @include font-style(11px,$white-text-color);
       font-weight: bold;
     }
 }

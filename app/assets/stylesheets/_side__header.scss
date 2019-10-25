@@ -12,13 +12,21 @@
       justify-content: space-between;
         &--name {
           background-color: $side-header-color;
-          color: $white-text-color;
-          font-size: 16px;
+          @include font-style(16px,$white-text-color);
           font-weight: bold;
         }
         &--menu {
           background-color: $side-header-color;
           display: flex;
+          list-style: none;
+            &__new-group {
+              margin-left: 0.3rem;
+              display: inline-block;
+            }
+            &__edit-user {
+              margin-left: 0.3rem;
+              display: inline-block;
+            }
         }
     }
 }

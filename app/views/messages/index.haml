@@ -6,9 +6,13 @@
         .side__header
           .side__header__box
             %p.side__header__box--name test-user
-            .side__header__box--manu
-              %i.fa.fa-edit
-              %i.fa.fa-cog
+            %ul.side__header__box--manu
+              %li.side__header__box--menu__new-group
+                %a{:href => "/groups/new"}
+                  %i.fa.fa-edit
+              %li.side__header__box--menu__edit-user
+                %a{:href => "/users/1455/edit"}
+                  %i.fa.fa-cog
         .side__groups
           .group
             %p.group__name test-message
@@ -37,3 +41,11 @@
               %p.message__info--date 2019/10/23(Tue) 16:10:00
             %p.message__text さようなら
         .form
+          %form#new_message.new_message{"accept-charset" => "UTF-8", :action => "/groups/3076/messages", :enctype => "multipart/form-data", :method => "post"}
+            %input{:name => "utf8", :type => "hidden", :value => "✓"}/
+            .input-box
+              %input#message_content.input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
+              %label.input-box__image{:for => "message_image"}
+                %i.fa.fa-image
+                %input#message_image.input-box__image__file{:name => "message[image]", :type => "file"}/
+            %input.submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
