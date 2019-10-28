@@ -1,28 +1,7 @@
 %body
   .wrapper
     .content
-      .content__side
-        .side__header
-          .side__header__box
-            %p.side__header__box--name 
-              = current_user.name
-            %ul.side__header__box--manu
-              %li.side__header__box--menu__new-group
-                %a{href: "/groups/new"}
-                  %i.fa.fa-edit
-              %li.side__header__box--menu__edit-user
-                = link_to edit_user_path(current_user) do
-                  %i.fa.fa-cog
-        .side__groups
-          .group
-            %p.group__name test-message
-            %p.group__message さようなら
-          .group
-            %p.group__name sample-group
-            %p.group__message hello!
-          .group
-            %p.group__name example
-            %p.group__message まだメッセージがありません
+      = render 'shared/side_bar'
       .content__main
         .main__header
           .main__header__left-box
