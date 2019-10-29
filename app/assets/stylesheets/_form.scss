@@ -3,36 +3,40 @@
   height: 90px;
   padding:20px 40px;
   box-sizing: border-box;
-}
-
-.new_message {
-  display: flex;
-}
-
-.input-box {
-  position: relative;
-  width: 100%;
-    &__text {
+    &__message {
       height: 50px;
       width: calc(100% - 40px);
       padding: 0 40px 0 10px;
       color: $black-text-color;
       border-style: none;
     }
-    &__image {
-      font-size: 1.3rem;
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      margin-right: 10px;
-      cursor: pointer;
-        &__file {
-          display: none;
+    &__mask {
+      position: relative;
+        &__image {
+          font-size: 1.3rem;
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          margin-right: 10px;
+          cursor: pointer;
         }
+    }
+    &__submit {
+      height: 50px;
+      width: 110px;
+      padding: 0 30px;
+      margin-left: 15px;
+      background-color: $light-blue-color;
+      color: white;
+      cursor: pointer;
     }
 }
 
-.fa.fa-image {
+.new_message {
+  display: flex;
+}
+
+.icon {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -40,12 +44,7 @@
   -webkit-font-smoothing: antialiased;
 }
 
-.submit-btn {
-  height: 50px;
-  width: 110px;
-  padding: 0 30px;
-  margin-left: 15px;
-  background-color: $light-blue-color;
-  color: white;
-  cursor: pointer;
+.hidden {
+  display: none;
 }
+
