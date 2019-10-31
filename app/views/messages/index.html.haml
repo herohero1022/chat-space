@@ -3,7 +3,15 @@
     .content
       = render 'shared/side_bar'
       .content__main
-        = render partial: 'header'
+        .main__header
+          .main__header__left-box
+            %p.main__header__left-box--group-name 
+              = @group.name
+            %ul.main__header__left-box--group-member 
+              Member: 
+              - @group.users.each do |user|
+                = user.name
+          .main__header--edit-btn Edit
         .messages
           = render partial: 'message', collection: @messages
         .form
