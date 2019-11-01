@@ -40,7 +40,7 @@ $(function(){
       $('.messages').append(html);
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight},'fast' );
       $('.form__submit').attr('disabled', false);
-      $('.form__message').val('')
+      $('.new_message')[0].reset();
     })
     .fail(function(message){
       alert('メッセージ送信に失敗しました');
