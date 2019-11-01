@@ -11,7 +11,10 @@
               Member: 
               - @group.users.each do |user|
                 = user.name
-          .main__header--edit-btn Edit
+          .main__header--edit-btn 
+            .main__header--edit-btn--text 
+              Edit
+          
         .messages
           = render partial: 'message', collection: @messages
         .form
