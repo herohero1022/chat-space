@@ -1,25 +1,24 @@
 $(function(){
-
   function buildhtml(message){
     var addimage = message.image.url ? `<img class="message-text__image" src=${message.image.url}>` : "";
-    var html = `<div class="message">
-                <div class="message__info">
-                  <p class="message__info--talker">
-                    ${message.user_name}
-                  </p>
-                  <p class="message__info--date">
-                    ${message.created_at}
-                  </p>
-                </div>
-                <div class="message__text">
-                  <p class="message__text">
-                    ${message.content}
-                  </p>
-                </div>
-                <div class="lower-message__image">
-                  ${addimage}
-                </div>
-               </div>`
+    var html = `<div class="message" data-id="${message.id}">
+                  <div class="message__info">
+                    <p class="message__info--talker">
+                      ${message.user_name}
+                    </p>
+                    <p class="message__info--date">
+                      ${message.created_at}
+                    </p>
+                  </div>
+                  <div class="message__text">
+                    <p class="message__text">
+                      ${message.content}
+                    </p>
+                  </div>
+                  <div class="lower-message__image">
+                    ${addimage}
+                  </div>
+                </div>`
     return html;
   }
 
@@ -46,4 +45,30 @@ $(function(){
       alert('メッセージ送信に失敗しました');
     })
   })
+
+  var reloadMessages = function() {
+    last_message_id = $('.message').last().data('id');
+    var url = 'api/messages'
+    $.ajax({
+      url: url,
+      type: 'GET',
+      dataType: 'json',
+      data: {id: last_message_id}
+    })
+    .done(function(messages) {
+      var insertHTML = '';
+      messages.forEach(function (message) {
+        insertHTML = buildhtml(message);
+        $('.messages').append(insertHTML);
+        $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight},'fast' );
+        console.log('success');
+      })
+    })
+    .fail(function() {
+      console.log('error');
+    });
+  };
+  if (location.pathname.match(/\/groups\/\d+\/messages/)) {
+  setInterval(reloadMessages, 10000);
+  }
 });
