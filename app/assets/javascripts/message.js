@@ -43,6 +43,7 @@ $(function(){
     })
     .fail(function(message){
       alert('メッセージ送信に失敗しました');
+      $('.form__submit').attr('disabled', false);
     })
   })
 
